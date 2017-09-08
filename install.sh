@@ -10,13 +10,13 @@ then
     ln npmrc ~/.npmrc
 fi
 
-if [ -e ~/.pip/pip.conf ]
+if [ ! -e ~/.pip/pip.conf ]
 then
     mkdir -p ~/.pip
     ln pip.conf ~/.pip/pip.conf
 fi
 
-if [ -e ~/.zshrc ]
+if [ ! -e ~/.zshrc ]
 then
     ln zshrc ~/.zshrc
 fi
