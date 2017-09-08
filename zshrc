@@ -82,7 +82,6 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-plugins=(git autojump extract cp tmux aws common-aliases)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,3 +102,31 @@ export TERM=xterm-256color
 
 # for autojump
 . /usr/share/autojump/autojump.zsh
+
+source ~/.antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle autojump 
+antigen bundle pip
+# antigen bundle lein
+antigen bundle command-not-found
+antigen bundle extract 
+antigen bundle cp 
+antigen bundle tmux 
+antigen bundle aws
+antigen bundle common-aliases
+antigen bundle wbinglee/zsh-wakatime
+
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+antigen theme robbyrussell
+
+# Tell Antigen that you're done.
+antigen apply
