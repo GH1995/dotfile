@@ -51,7 +51,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -81,18 +83,14 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# 
+# 
+# ------------------MY CONFIG--------------------------
 
-
-# source $ZSH/oh-my-zsh.sh
-
-# command-not-found
-# alias ta='tmux attach -t'
-# alias tad='tmux attach -d -t'
-# alias ts='tmux new-session -s'
-# alias tl='tmux list-sessions'
-# alias tksv='tmux kill-server'
-# alias tkss='tmux kill-session -t'
-
+#######
+####### HOW TO GET command's HELP?
+####### commandx | grep command
+#######
 
 # added by Miniconda3 4.3.21 installer
 export PATH="/home/hxs/miniconda3/bin:$PATH"
