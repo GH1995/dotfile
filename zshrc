@@ -102,3 +102,6 @@ export TERM=xterm-256color
 
 # for autojump
 . /usr/share/autojump/autojump.zsh
+
+# plugins
+plugins=(git autojump tmux common-aliases systemd)
