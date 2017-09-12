@@ -102,4 +102,8 @@ export TERM=xterm-256color
 . /usr/share/autojump/autojump.zsh
 
 # plugins
-plugins=(git autojump tmux common-aliases systemd command-not-found pip)
+plugins=(git autojump tmux common-aliases systemd command-not-found pip sudo)
+source $ZSH/oh-my-zsh.sh
+
+# user's command
+alias dir="tree -L 2"
