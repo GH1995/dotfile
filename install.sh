@@ -19,6 +19,9 @@ fi
 if [ ! -e ~/.zshrc ]
 then
     ln ~/dotfile/zshrc ~/.zshrc
+else
+    rm ~/.zshrc
+    ln ~/dotfile/zshrc ~/.zshrc
 fi
 
 if [ -e ~/.tmux.conf.local ]
