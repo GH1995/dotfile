@@ -107,3 +107,4 @@ source $ZSH/oh-my-zsh.sh
 
 # user's command
 alias dir="tree -L 2"
+alias sync='rsync -e "ssh -p 5102" -rvz --exclude='miniconda3' ~ guanhua@183.174.228.40:~/backup/$HOST'
