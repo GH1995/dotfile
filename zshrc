@@ -110,3 +110,4 @@ alias dir="tree -L 2"
 alias sync='rsync -e "ssh -p 5102" -rvz --exclude='miniconda3' ~ guanhua@183.174.228.40:~/backup/$HOST'
 alias rm='trash'
 alias nload='nload -U h eth0'
+alias emacs='emacs -mm'
