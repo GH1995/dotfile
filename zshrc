@@ -83,8 +83,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# 
-# 
+#
+#
 # ------------------MY CONFIG--------------------------
 
 #######
@@ -111,3 +111,4 @@ alias sync='rsync -e "ssh -p 5102" -rvz --exclude='miniconda3' ~ guanhua@183.174
 alias rm='trash'
 alias nload='nload -U h eth0'
 alias emacs='emacs -mm'
+alias upload="rsync -rvz --exclude='miniconda3' --exclude='.*' ~ hxs@47.95.240.181:~/"
