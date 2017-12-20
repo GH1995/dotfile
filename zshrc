@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/hxs/.oh-my-zsh
+export ZSH=/home/hxs/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -102,7 +102,7 @@ export TERM=xterm-256color
 . /usr/share/autojump/autojump.zsh
 
 # plugins
-plugins=(git autojump tmux common-aliases systemd command-not-found pip sudo)
+plugins=(git autojump tmux common-aliases systemd command-not-found pip sudo dirhistory docker npm systemd)
 source $ZSH/oh-my-zsh.sh
 
 # user's command
@@ -110,5 +110,4 @@ alias dir="tree -L 2"
 alias sync='rsync -e "ssh -p 5102" -rvz --exclude='miniconda3' ~ guanhua@183.174.228.40:~/backup/$HOST'
 alias rm='trash'
 alias nload='nload -U h eth0'
-alias emacs='emacs -mm'
-alias upload="rsync -rvz --exclude='miniconda3' --exclude='.*' ~ hxs@47.95.240.181:~/"
+alias xopen='xdg-open'
