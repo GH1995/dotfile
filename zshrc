@@ -111,3 +111,6 @@ alias sync='rsync -e "ssh -p 5102" -rvz --exclude='miniconda3' ~ guanhua@183.174
 alias rm='trash'
 alias nload='nload -U h eth0'
 alias xopen='xdg-open'
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
