@@ -106,8 +106,7 @@ plugins=(git autojump tmux common-aliases systemd command-not-found pip sudo dir
 source $ZSH/oh-my-zsh.sh
 
 # user's command
-alias dir="tree -L 2"
-alias sync='rsync -e "ssh -p 5102" -rvz --exclude='miniconda3' ~ guanhua@183.174.228.40:~/backup/$HOST'
+alias tree='tree -L 2'
 alias rm='trash'
 alias nload='nload -U h eth0'
 alias xopen='xdg-open'

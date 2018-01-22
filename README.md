@@ -1,16 +1,15 @@
 # dotfile
 
-## how to install
+## How to install
 
-```shell
+```sh
 ./install.sh
 ```
 
-## how to update
+## How to update
 
-```shell
+```sh
 ./install.sh
 ```
 
-## how to use
-
+## How to use
