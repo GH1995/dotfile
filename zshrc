@@ -2,12 +2,19 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/hxs/.oh-my-zsh
+  export ZSH=/home/hxs/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +58,21 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
+plugins=(
+    git
+    autojump
+    tmux
+    common-aliases
+    systemd
+    command-not-found
+    pip
+    sudo
+    dirhistory
+    docker
+    npm
+    systemd
+    zsh-nvm
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,17 +104,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#
-# ------------------MY CONFIG--------------------------
 
-#######
-####### HOW TO GET command's HELP?
-####### commandx | grep command
-#######
 
-# added by Miniconda3 4.3.21 installer
-export PATH="/home/hxs/miniconda3/bin:$PATH"
+# added by Anaconda3 installer
+# export PATH="/home/hxs/.anaconda3/bin:$PATH"
+export PATH="/home/hxs/anaconda3/bin:$PATH"
 
 alias s="ls"
 export TERM=xterm-256color
@@ -101,15 +116,12 @@ export TERM=xterm-256color
 # for autojump
 . /usr/share/autojump/autojump.zsh
 
-# plugins
-plugins=(git autojump tmux common-aliases systemd command-not-found pip sudo dirhistory docker npm systemd)
-source $ZSH/oh-my-zsh.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # user's command
-alias tree='tree -L 2'
+alias dir="tree -L 2"
 alias rm='trash'
-alias nload='nload -U h eth0'
-alias xopen='xdg-open'
 
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+export SPARK_HOME=/usr/local/spark
