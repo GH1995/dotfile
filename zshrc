@@ -71,7 +71,6 @@ plugins=(
     docker
     npm
     systemd
-    zsh-nvm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,22 +105,25 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# added by Anaconda3 installer
-# export PATH="/home/hxs/.anaconda3/bin:$PATH"
-export PATH="/home/hxs/anaconda3/bin:$PATH"
-
 alias s="ls"
 export TERM=xterm-256color
 
 # for autojump
 . /usr/share/autojump/autojump.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # user's command
 alias dir="tree -L 2"
 alias rm='trash'
 
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 export SPARK_HOME=/usr/local/spark
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# added by Anaconda3 installer
+export PATH="/home/hxs/anaconda3/bin:$PATH"
+
+export PYSPARK_PYTHON=/home/hxs/anaconda3/bin/python
+export PYSPARK_DRIVER_PYTHON=/home/hxs/anaconda3/bin/ipython
