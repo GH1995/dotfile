@@ -15,7 +15,7 @@ IS_NPM=0
 
 # Pre check
 check_installed() {
-    softwares=("vim" "git" "tmux" "pip" "zsh" "conda" "latex")
+    softwares=("vim" "git" "tmux" "pip" "zsh" "conda" "latex" "npm")
 
     for sw in "${softwares[@]}"; do
         flag="IS_${sw^^}"  # bash >= 4.0
