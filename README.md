@@ -10,23 +10,23 @@ sudo apt install zsh git cmake build-essential glances tmux texlive-full
 
 ## 安装步骤
 
-`anaconda`
-:	`wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh`，然后`bash Anaconda3-5.2.0-Linux-x86_64.sh`。之后需要做的就是配置`.condarc`，`ln -s ~/.dotfile/condarc ~/.condarc`。
+- `anaconda`:`wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh`，然后`bash Anaconda3-5.2.0-Linux-x86_64.sh`。之后需要做的就是配置`.condarc`，`ln -s ~/.dotfile/condarc ~/.condarc`。
+- `oh-my-zsh`
+`sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`, `ln -s -f ~/.dotfile/zshrc ~/.zshrc`
+- `tmux`
+`cd`, `git clone https://github.com/gpakosz/.tmux.git`, `ln -s -f .tmux/.tmux.conf`, `cp .tmux/.tmux.conf.local .`
+- `git`
+`ln -s -f ~/.dotfile/gitconfig ~/.gitconfig`, `ln -s -f ~/.dotfile/gitignore ~/.gitignore`
+- `latex`
+`ln -s -f ~/.dotfile/latexmkrc ~/.latexmkrc`
+- `pip`
+`mkdir ~/.pip`, `ln -s -f ~/.dotfile/pip.conf ~/.pip/pip.conf`
+- `npmrc`
+`ln -s -f ~/.dotfile/npmrc ~/.npmrc`
 
-`oh-my-zsh`
-:	`sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`, `ln -s -f ~/.dotfile/zshrc ~/.zshrc`
+# 或者一键化脚本
 
-`tmux`
-:	`cd`, `git clone https://github.com/gpakosz/.tmux.git`, `ln -s -f .tmux/.tmux.conf`, `cp .tmux/.tmux.conf.local .`
-
-`git`
-:	`ln -s -f ~/.dotfile/gitconfig ~/.gitconfig`, `ln -s -f ~/.dotfile/gitignore ~/.gitignore`
-
-`latex`
-:	`ln -s -f ~/.dotfile/latexmkrc ~/.latexmkrc`
-
-`pip`
-:	`mkdir ~/.pip`, `ln -s -f ~/.dotfile/pip.conf ~/.pip/pip.conf`
-
-`npmrc`
-:	`ln -s -f ~/.dotfile/npmrc ~/.npmrc`
+```sh
+chomd +x dotfile.sh
+./dotfile.sh
+```
