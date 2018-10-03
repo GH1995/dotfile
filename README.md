@@ -5,7 +5,7 @@
 这是一个Ubuntu安装后的配置文件。首先，你需要安装必要的软件：
 
 ```sh
-sudo apt instatall zsh git cmake build-essential glances tmux texlive-full
+sudo apt install zsh git cmake build-essential glances tmux texlive-full
 ```
 
 ## 安装步骤
