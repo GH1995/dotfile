@@ -11,6 +11,7 @@ IS_PIP=0
 IS_ZSH=0
 IS_CONDA=0
 IS_LATEX=0
+IS_NPM=0
 
 # Pre check
 check_installed() {
@@ -116,6 +117,7 @@ config_tmux() {
     fi
 }
 
+
 config_conda() {
     create_symlinks "conda/condarc" ".condarc"
 }
@@ -124,6 +126,9 @@ config_latex() {
     create_symlinks "latex/latexmkrc" ".latexmkrc"
 }
 
+config_npm() {
+    create_symlinks "npm/npmrc" ".npmrc"
+}
 
 check_installed
 [ $IS_VIM -eq 1 ] && config_vim
@@ -133,5 +138,6 @@ check_installed
 [ $IS_TMUX -eq 1 ] && config_tmux
 [ $IS_CONDA -eq 1 ] && config_conda
 [ $IS_LATEX -eq 1 ] && config_latex
+[ $IS_NPM -eq 1 ] && config_npm
 
 echo "[SETUP OK]"

@@ -2,4 +2,4 @@
 	email = tulingjiaoyu@outlook.com
 	name = Guan Hua
 [alias]
-    random = !"git add -A; git commit -am \"$(echo $(curl -s http://whatthecommit.com/index.txt)\" \")\"; git pull --rebase; git push"
+	yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
