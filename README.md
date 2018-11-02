@@ -28,5 +28,7 @@ anaconda也请自行安装在`HOME`目录下。
 ## 安装步骤
 
 ```sh
+git clone https://github.com/GH1995/dotfile.git ~/.dotfile
+cd ~/.dotfile
 bash setup.sh
 ```
